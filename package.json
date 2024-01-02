@@ -1,0 +1,22 @@
+{
+  "name": "derand",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy:mumbai": "graph deploy --node https://api.thegraph.com/deploy/ shayanshiravani/derand-mumbai",
+    "create-local": "graph create --node http://localhost:8020/ shayanshiravani/derand",
+    "remove-local": "graph remove --node http://localhost:8020/ shayanshiravani/derand",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 shayanshiravani/derand",
+    "test": "graph test",
+    "prepare:mumbai": "mustache config/mumbai.json template.yaml > subgraph.yaml"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.60.0",
+    "@graphprotocol/graph-ts": "0.30.0",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "matchstick-as": "0.5.0"
+  }
+}

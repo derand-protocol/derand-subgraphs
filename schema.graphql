@@ -1,0 +1,43 @@
+type ConfigSet @entity(immutable: true) {
+  id: Bytes!
+  minimumRequestConfirmations: Int! # uint16
+  maxGasLimit: BigInt! # uint32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RandomWordsFulfilled @entity(immutable: true) {
+  id: Bytes!
+  requestId: BigInt! # uint256
+  executor: Bytes! # address
+  consumer: Bytes! # address
+  outputSeed: BigInt! # uint256
+  success: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+  gasUsage: BigInt!
+}
+
+type RandomWordsRequested @entity(immutable: true) {
+  id: Bytes!
+  requestId: BigInt! # uint256
+  preSeed: BigInt! # uint256
+  minimumRequestConfirmations: Int! # uint16
+  callbackGasLimit: BigInt! # uint32
+  numWords: BigInt! # uint32
+  sender: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
