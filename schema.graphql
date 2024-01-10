@@ -19,8 +19,8 @@ type OwnershipTransferred @entity(immutable: true) {
 type RandomWordsFulfilled @entity(immutable: true) {
   id: Bytes!
   requestId: BigInt! # uint256
-  executor: Bytes! # address
   consumer: Bytes! # address
+  executor: Bytes! # address
   outputSeed: BigInt! # uint256
   success: Boolean! # bool
   blockNumber: BigInt!

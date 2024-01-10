@@ -26,7 +26,7 @@ dataSources:
           handler: handleConfigSet
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
-        - event: RandomWordsFulfilled(indexed uint256,indexed address,uint256,bool)
+        - event: RandomWordsFulfilled(indexed uint256,indexed address,indexed address,uint256,bool)
           handler: handleRandomWordsFulfilled
           receipt: true
         - event: RandomWordsRequested(uint256,uint256,uint16,uint32,uint32,indexed address)

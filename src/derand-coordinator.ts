@@ -49,8 +49,8 @@ export function handleRandomWordsFulfilled(
     event.transaction.hash.concatI32(event.logIndex.toI32())
   )
   entity.requestId = event.params.requestId
-  entity.executor = event.transaction.from
   entity.consumer = event.params.consumer
+  entity.executor = event.params.executor
   entity.outputSeed = event.params.outputSeed
   entity.success = event.params.success
 
