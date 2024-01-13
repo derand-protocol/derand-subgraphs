@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: DeRandCoordinator
-    network: mumbai
+    network: fuji
     source:
-      address: "0x6e3cf66cb5b6F56B2e57849833e02Ac98637eB83"
+      address: "0x3D1CBd70145b4025579DBFbBe643517C299bD423"
       abi: DeRandCoordinator
-      startBlock: 44609635
+      startBlock: 29267648
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
