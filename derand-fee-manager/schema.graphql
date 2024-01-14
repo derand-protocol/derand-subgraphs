@@ -1,0 +1,39 @@
+type ExecutorAdded @entity(immutable: true) {
+  id: Bytes!
+  executor: Bytes! # address
+  DeRandFeeManager_id: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ExecutorDeposit @entity(immutable: true) {
+  id: Bytes!
+  depositor: Bytes! # address
+  consumer: Bytes! # address
+  chainId: BigInt! # uint256
+  executor: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ExecutorWithdraw @entity(immutable: true) {
+  id: Bytes!
+  executor: Bytes! # address
+  recipient: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

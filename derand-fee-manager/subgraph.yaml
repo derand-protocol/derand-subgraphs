@@ -1,0 +1,33 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: DeRandFeeManager
+    network: chapel
+    source:
+      address: "0x0a91e04C4947D0Ba9B62b84d735A345b6018D762"
+      abi: DeRandFeeManager
+      startBlock: 36838112
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ExecutorAdded
+        - ExecutorDeposit
+        - ExecutorWithdraw
+        - OwnershipTransferred
+      abis:
+        - name: DeRandFeeManager
+          file: ./abis/DeRandFeeManager.json
+      eventHandlers:
+        - event: ExecutorAdded(address,uint256)
+          handler: handleExecutorAdded
+        - event: ExecutorDeposit(address,address,uint256,address,uint256)
+          handler: handleExecutorDeposit
+        - event: ExecutorWithdraw(address,address,uint256)
+          handler: handleExecutorWithdraw
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+      file: ./src/de-rand-fee-manager.ts
