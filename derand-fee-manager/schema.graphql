@@ -7,6 +7,14 @@ type ExecutorAdded @entity(immutable: true) {
   transactionHash: Bytes!
 }
 
+type ConsumerBalance @entity {
+  id: ID!
+  consumer: Bytes! # address
+  chainId: BigInt! # uint256
+  executor: Bytes! # address
+  amount: BigInt! # uint256
+}
+
 type ExecutorDeposit @entity(immutable: true) {
   id: Bytes!
   depositor: Bytes! # address

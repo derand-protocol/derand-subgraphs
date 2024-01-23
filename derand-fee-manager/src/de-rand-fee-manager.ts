@@ -10,6 +10,7 @@ import {
   ExecutorWithdraw,
   OwnershipTransferred
 } from "../generated/schema"
+import { increaseConsumerBalance } from "./consumer"
 
 export function handleExecutorAdded(event: ExecutorAddedEvent): void {
   let entity = new ExecutorAdded(
@@ -40,6 +41,8 @@ export function handleExecutorDeposit(event: ExecutorDepositEvent): void {
   entity.transactionHash = event.transaction.hash
 
   entity.save()
+
+  increaseConsumerBalance(entity.consumer, entity.chainId, entity.executor, entity.amount)
 }
 
 export function handleExecutorWithdraw(event: ExecutorWithdrawEvent): void {
