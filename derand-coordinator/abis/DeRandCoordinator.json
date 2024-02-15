@@ -16,6 +16,19 @@
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
+  { "inputs": [], "name": "ECDSAInvalidSignature", "type": "error" },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "length", "type": "uint256" }
+    ],
+    "name": "ECDSAInvalidSignatureLength",
+    "type": "error"
+  },
+  {
+    "inputs": [{ "internalType": "bytes32", "name": "s", "type": "bytes32" }],
+    "name": "ECDSAInvalidSignatureS",
+    "type": "error"
+  },
   {
     "inputs": [
       { "internalType": "uint32", "name": "have", "type": "uint32" },
@@ -204,10 +217,11 @@
           { "internalType": "uint32", "name": "numWords", "type": "uint32" },
           { "internalType": "address", "name": "sender", "type": "address" }
         ],
-        "internalType": "struct DerandCoordinator.RequestCommitment",
+        "internalType": "struct DeRandCoordinator.RequestCommitment",
         "name": "rc",
         "type": "tuple"
       },
+      { "internalType": "address", "name": "executor", "type": "address" },
       { "internalType": "bytes", "name": "reqId", "type": "bytes" },
       {
         "components": [
@@ -218,7 +232,8 @@
         "internalType": "struct IMuonClient.SchnorrSign",
         "name": "signature",
         "type": "tuple"
-      }
+      },
+      { "internalType": "bytes", "name": "gatewaySignature", "type": "bytes" }
     ],
     "name": "fulfillRandomWords",
     "outputs": [],
@@ -286,6 +301,13 @@
   },
   {
     "inputs": [],
+    "name": "muonValidGateway",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "owner",
     "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
@@ -329,6 +351,54 @@
       { "internalType": "uint32", "name": "maxGasLimit", "type": "uint32" }
     ],
     "name": "setConfig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_muonAddress", "type": "address" }
+    ],
+    "name": "setMuonAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_muonAppId", "type": "uint256" }
+    ],
+    "name": "setMuonAppId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_gatewayAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setMuonGateway",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "x", "type": "uint256" },
+          { "internalType": "uint8", "name": "parity", "type": "uint8" }
+        ],
+        "internalType": "struct IMuonClient.PublicKey",
+        "name": "_muonPublicKey",
+        "type": "tuple"
+      }
+    ],
+    "name": "setMuonPubKey",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
