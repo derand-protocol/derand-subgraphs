@@ -1,76 +1,127 @@
 [
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_muonAppId", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "_muonAppId",
+        "type": "uint256"
+      },
       {
         "components": [
-          { "internalType": "uint256", "name": "x", "type": "uint256" },
-          { "internalType": "uint8", "name": "parity", "type": "uint8" }
+          {
+            "internalType": "uint256",
+            "name": "x",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "parity",
+            "type": "uint8"
+          }
         ],
         "internalType": "struct IMuonClient.PublicKey",
         "name": "_muonPublicKey",
         "type": "tuple"
       },
-      { "internalType": "address", "name": "_muon", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_muon",
+        "type": "address"
+      }
     ],
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
-  { "inputs": [], "name": "ECDSAInvalidSignature", "type": "error" },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "length", "type": "uint256" }
-    ],
-    "name": "ECDSAInvalidSignatureLength",
-    "type": "error"
-  },
-  {
-    "inputs": [{ "internalType": "bytes32", "name": "s", "type": "bytes32" }],
-    "name": "ECDSAInvalidSignatureS",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      { "internalType": "uint32", "name": "have", "type": "uint32" },
-      { "internalType": "uint32", "name": "want", "type": "uint32" }
+      {
+        "internalType": "uint32",
+        "name": "have",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "want",
+        "type": "uint32"
+      }
     ],
     "name": "GasLimitTooBig",
     "type": "error"
   },
-  { "inputs": [], "name": "IncorrectCommitment", "type": "error" },
+  {
+    "inputs": [],
+    "name": "IncorrectCommitment",
+    "type": "error"
+  },
   {
     "inputs": [
-      { "internalType": "uint16", "name": "have", "type": "uint16" },
-      { "internalType": "uint16", "name": "min", "type": "uint16" },
-      { "internalType": "uint16", "name": "max", "type": "uint16" }
+      {
+        "internalType": "uint16",
+        "name": "have",
+        "type": "uint16"
+      },
+      {
+        "internalType": "uint16",
+        "name": "min",
+        "type": "uint16"
+      },
+      {
+        "internalType": "uint16",
+        "name": "max",
+        "type": "uint16"
+      }
     ],
     "name": "InvalidRequestConfirmations",
     "type": "error"
   },
-  { "inputs": [], "name": "NoCorrespondingRequest", "type": "error" },
+  {
+    "inputs": [],
+    "name": "NoCorrespondingRequest",
+    "type": "error"
+  },
   {
     "inputs": [
-      { "internalType": "uint32", "name": "have", "type": "uint32" },
-      { "internalType": "uint32", "name": "want", "type": "uint32" }
+      {
+        "internalType": "uint32",
+        "name": "have",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "want",
+        "type": "uint32"
+      }
     ],
     "name": "NumWordsTooBig",
     "type": "error"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "owner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
     ],
     "name": "OwnableInvalidOwner",
     "type": "error"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "account", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
     ],
     "name": "OwnableUnauthorizedAccount",
     "type": "error"
   },
-  { "inputs": [], "name": "Reentrant", "type": "error" },
+  {
+    "inputs": [],
+    "name": "Reentrant",
+    "type": "error"
+  },
   {
     "anonymous": false,
     "inputs": [
@@ -192,48 +243,95 @@
   {
     "inputs": [],
     "name": "MAX_NUM_WORDS",
-    "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "MAX_REQUEST_CONFIRMATIONS",
-    "outputs": [{ "internalType": "uint16", "name": "", "type": "uint16" }],
+    "outputs": [
+      {
+        "internalType": "uint16",
+        "name": "",
+        "type": "uint16"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "requestId", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "requestId",
+        "type": "uint256"
+      },
       {
         "components": [
-          { "internalType": "uint256", "name": "blockNum", "type": "uint256" },
+          {
+            "internalType": "uint256",
+            "name": "blockNum",
+            "type": "uint256"
+          },
           {
             "internalType": "uint32",
             "name": "callbackGasLimit",
             "type": "uint32"
           },
-          { "internalType": "uint32", "name": "numWords", "type": "uint32" },
-          { "internalType": "address", "name": "sender", "type": "address" }
+          {
+            "internalType": "uint32",
+            "name": "numWords",
+            "type": "uint32"
+          },
+          {
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          }
         ],
         "internalType": "struct DeRandCoordinator.RequestCommitment",
         "name": "rc",
         "type": "tuple"
       },
-      { "internalType": "address", "name": "executor", "type": "address" },
-      { "internalType": "bytes", "name": "reqId", "type": "bytes" },
+      {
+        "internalType": "address",
+        "name": "executor",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "reqId",
+        "type": "bytes"
+      },
       {
         "components": [
-          { "internalType": "uint256", "name": "signature", "type": "uint256" },
-          { "internalType": "address", "name": "owner", "type": "address" },
-          { "internalType": "address", "name": "nonce", "type": "address" }
+          {
+            "internalType": "uint256",
+            "name": "signature",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "nonce",
+            "type": "address"
+          }
         ],
         "internalType": "struct IMuonClient.SchnorrSign",
         "name": "signature",
         "type": "tuple"
-      },
-      { "internalType": "bytes", "name": "gatewaySignature", "type": "bytes" }
+      }
     ],
     "name": "fulfillRandomWords",
     "outputs": [],
@@ -242,10 +340,20 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "requestId", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "requestId",
+        "type": "uint256"
+      }
     ],
     "name": "getCommitment",
-    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -258,7 +366,11 @@
         "name": "minimumRequestConfirmations",
         "type": "uint16"
       },
-      { "internalType": "uint32", "name": "maxGasLimit", "type": "uint32" }
+      {
+        "internalType": "uint32",
+        "name": "maxGasLimit",
+        "type": "uint32"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
@@ -267,8 +379,16 @@
     "inputs": [],
     "name": "getRequestConfig",
     "outputs": [
-      { "internalType": "uint16", "name": "", "type": "uint16" },
-      { "internalType": "uint32", "name": "", "type": "uint32" }
+      {
+        "internalType": "uint16",
+        "name": "",
+        "type": "uint16"
+      },
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
@@ -277,7 +397,11 @@
     "inputs": [],
     "name": "muon",
     "outputs": [
-      { "internalType": "contract IMuonClient", "name": "", "type": "address" }
+      {
+        "internalType": "contract IMuonClient",
+        "name": "",
+        "type": "address"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
@@ -285,7 +409,13 @@
   {
     "inputs": [],
     "name": "muonAppId",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -293,23 +423,30 @@
     "inputs": [],
     "name": "muonPublicKey",
     "outputs": [
-      { "internalType": "uint256", "name": "x", "type": "uint256" },
-      { "internalType": "uint8", "name": "parity", "type": "uint8" }
+      {
+        "internalType": "uint256",
+        "name": "x",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint8",
+        "name": "parity",
+        "type": "uint8"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
-    "name": "muonValidGateway",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "owner",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -322,8 +459,16 @@
   },
   {
     "inputs": [
-      { "internalType": "bytes32", "name": "keyHash", "type": "bytes32" },
-      { "internalType": "uint64", "name": "subId", "type": "uint64" },
+      {
+        "internalType": "bytes32",
+        "name": "keyHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint64",
+        "name": "subId",
+        "type": "uint64"
+      },
       {
         "internalType": "uint16",
         "name": "requestConfirmations",
@@ -334,10 +479,20 @@
         "name": "callbackGasLimit",
         "type": "uint32"
       },
-      { "internalType": "uint32", "name": "numWords", "type": "uint32" }
+      {
+        "internalType": "uint32",
+        "name": "numWords",
+        "type": "uint32"
+      }
     ],
     "name": "requestRandomWords",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "nonpayable",
     "type": "function"
   },
@@ -348,7 +503,11 @@
         "name": "minimumRequestConfirmations",
         "type": "uint16"
       },
-      { "internalType": "uint32", "name": "maxGasLimit", "type": "uint32" }
+      {
+        "internalType": "uint32",
+        "name": "maxGasLimit",
+        "type": "uint32"
+      }
     ],
     "name": "setConfig",
     "outputs": [],
@@ -357,7 +516,11 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_muonAddress", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_muonAddress",
+        "type": "address"
+      }
     ],
     "name": "setMuonAddress",
     "outputs": [],
@@ -366,7 +529,11 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_muonAppId", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "_muonAppId",
+        "type": "uint256"
+      }
     ],
     "name": "setMuonAppId",
     "outputs": [],
@@ -376,22 +543,17 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_gatewayAddress",
-        "type": "address"
-      }
-    ],
-    "name": "setMuonGateway",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "components": [
-          { "internalType": "uint256", "name": "x", "type": "uint256" },
-          { "internalType": "uint8", "name": "parity", "type": "uint8" }
+          {
+            "internalType": "uint256",
+            "name": "x",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "parity",
+            "type": "uint8"
+          }
         ],
         "internalType": "struct IMuonClient.PublicKey",
         "name": "_muonPublicKey",
@@ -405,7 +567,11 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "newOwner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
     ],
     "name": "transferOwnership",
     "outputs": [],
