@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: DeRandCoordinator
-    network: fuji
+    network: optimism
     source:
-      address: "0x3D1CBd70145b4025579DBFbBe643517C299bD423"
+      address: "0x24092A71ae67b6773F6ecdc56a9E153e5C57D2E7"
       abi: DeRandCoordinator
-      startBlock: 29267648
+      startBlock: 117037829
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
