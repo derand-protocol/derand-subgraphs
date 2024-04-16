@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: DeRandFeeManager
-    network: chapel
+    network: bsc
     source:
-      address: "0xf7BDEfbc18A3404ee2A2fF6f7598D3909b4961FD"
+      address: "0x134686fc7F90b42Ad29Fef4E361786589F33598b"
       abi: DeRandFeeManager
-      startBlock: 37824973
+      startBlock: 36713355
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
