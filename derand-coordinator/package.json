@@ -9,7 +9,7 @@
     "deploy:sepolia": "graph deploy --node https://api.thegraph.com/deploy/ shayanshiravani/derand-sepolia",
     "deploy:goerli": "graph deploy --node https://api.thegraph.com/deploy/ shayanshiravani/derand-goerli",
     "deploy:avalancheFuji": "graph deploy --node https://api.thegraph.com/deploy/ shayanshiravani/derand-avalanche-fuji",
-    "deploy:bsc": "graph deploy --node https://api.thegraph.com/deploy/ shayanshiravani/derand-bsc",
+    "deploy:bsc": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-bsc",
     "deploy:linea": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-linea",
     "deploy:optimism": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-optimism",
     "create-local": "graph create --node http://localhost:8020/ shayanshiravani/derand",
