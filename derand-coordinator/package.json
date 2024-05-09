@@ -12,6 +12,8 @@
     "deploy:bsc": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-bsc",
     "deploy:linea": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-linea",
     "deploy:optimism": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-optimism",
+    "deploy:base": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-base",
+    "deploy:scroll": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-scroll",
     "create-local": "graph create --node http://localhost:8020/ shayanshiravani/derand",
     "remove-local": "graph remove --node http://localhost:8020/ shayanshiravani/derand",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 shayanshiravani/derand",
@@ -23,7 +25,9 @@
     "prepare:avalancheFuji": "mustache config/avalancheFujiTestnet.json template.yaml > subgraph.yaml",
     "prepare:bsc": "mustache config/bsc.json template.yaml > subgraph.yaml",
     "prepare:linea": "mustache config/linea.json template.yaml > subgraph.yaml",
-    "prepare:optimism": "mustache config/optimism.json template.yaml > subgraph.yaml"
+    "prepare:optimism": "mustache config/optimism.json template.yaml > subgraph.yaml",
+    "prepare:base": "mustache config/base.json template.yaml > subgraph.yaml",
+    "prepare:scroll": "mustache config/scroll.json template.yaml > subgraph.yaml"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.60.0",
