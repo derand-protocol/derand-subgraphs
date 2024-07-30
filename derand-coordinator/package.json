@@ -14,6 +14,8 @@
     "deploy:optimism": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-optimism",
     "deploy:base": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-base",
     "deploy:scroll": "graph deploy --node https://api.studio.thegraph.com/deploy/ derand-scroll",
+    "deploy:zetaTestnet": "graph deploy derand-zeta-testnet --version-label 1.0.0 --node https://subgraphs.alchemy.com/api/subgraphs/deploy --ipfs https://ipfs.satsuma.xyz --deploy-key",
+    "deploy:zetaMainnet": "goldsky subgraph deploy derand-zeta-mainnet/1.0.0",
     "create-local": "graph create --node http://localhost:8020/ shayanshiravani/derand",
     "remove-local": "graph remove --node http://localhost:8020/ shayanshiravani/derand",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 shayanshiravani/derand",
@@ -27,7 +29,9 @@
     "prepare:linea": "mustache config/linea.json template.yaml > subgraph.yaml",
     "prepare:optimism": "mustache config/optimism.json template.yaml > subgraph.yaml",
     "prepare:base": "mustache config/base.json template.yaml > subgraph.yaml",
-    "prepare:scroll": "mustache config/scroll.json template.yaml > subgraph.yaml"
+    "prepare:scroll": "mustache config/scroll.json template.yaml > subgraph.yaml",
+    "prepare:zetaTestnet": "mustache config/zetaTestnet.json template.yaml > subgraph.yaml",
+    "prepare:zetaMainnet": "mustache config/zetaMainnet.json template.yaml > subgraph.yaml"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.60.0",
